@@ -7,8 +7,7 @@
 ---
 
 ### 🛠️ Tech Stack
-- **Languages:** HTML, CSS, PHP, C, C++  
-- **Tools & Platforms:** Visual Studio Code, Git, XAMPP  
+- **Languages:** HTML, CSS, PHP, C, C++ 
 - **Interests:** Web design, software architecture, project planning
 
 ---
