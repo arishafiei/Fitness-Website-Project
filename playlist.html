@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<title>My Example</title>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	init();
+	function init(){
+		var current = 0;
+		var audio = $('#audio');
+		var playlist = $('#playlist');
+		var tracks = playlist.find('li a');
+		var len = tracks.length - 1;
+		audio[0].volume = .10;
+		audio[0].play();
+		playlist.on('click','a', function(e){
+			e.preventDefault();
+			link = $(this);
+			current = link.parent().index();
+			run(link, audio[0]);
+		});
+		audio[0].addEventListener('ended',function(e){
+			current++;
+			if(current == len){
+				current = 0;
+				link = playlist.find('a')[0];
+			}else{
+				link = playlist.find('a')[current];    
+			}
+			run($(link),audio[0]);
+		});
+	}
+	function run(link, player){
+			player.src = link.attr('href');
+			par = link.parent();
+			par.addClass('active').siblings().removeClass('active');
+			player.load();
+			player.play();
+	}
+});
+</script>
+
+<style> 
+#playlist,audio{
+   margin-left:325px;
+   background:blue;
+   width:660px;
+   padding:10px;
+   text-align:center;}
+   
+#image1{
+   width:300px;
+   height:250px;
+   position:absolute;
+   margin-left:15px;
+   margin-top:90px}
+   
+#image2{
+   width:300px;
+   height:250px;
+   position:absolute;
+   margin-left:1010px;
+   margin-top:90px;}
+   
+#image3{
+   width:300px;
+   height:250px;
+   position:absolute;
+   margin-left:15px;
+   margin-top:650px;}
+   
+#image4{
+   width:300px;
+   height:250px;
+   position:absolute;
+   margin-left:1010px;
+   margin-top:650px;}
+
+a:hover{
+   color:blue;
+   text-decoration:none;}
+
+li a{
+   color:aqua;
+   background:black;
+   padding:5px;
+   display:block;
+   font-family:Bahnschrift;}
+
+li a:hover{
+   text-decoration:none;}
+
+h1{
+   font-family:Bahnschrift;
+   text-align:center;
+   font-size:80px;}
+</style>
+
+<body style="background-color:aqua">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0D0221;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #0D0221;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+<div id="mySidebar" class="sidebar">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="mainPage.html">Home</a>
+  <a href="emain.html">Exercises</a>
+  <a href="new.html">Diets</a>
+  <a href="Coaches2.html">Coaches</a>
+  <a href="http://localhost/BMI1.php">BMI</a>
+  <a href="http://localhost/calories%20tracking.php">Calorie Tracker</a>
+  <a href="playlist.html">Playlist</a>
+  <a href="https://www.myenso.de/">Shop Goods</a>
+  <a href="https://www.domaxsport.com/">Shop Clothes</a>
+  <a href="aboutus.html">About us</a>
+</div>
+<div id="main">
+<button class="openbtn" onclick="openNav()">☰</button> 
+<h1> WORKOUT PLAYLIST </h1>
+
+<img id='image1' src='https://i.ytimg.com/vi/zu0W2MRmN1I/maxresdefault.jpg'>
+<img id='image2' src='https://i.ytimg.com/vi/t1Ol76_yKY0/maxresdefault.jpg'>
+<img id='image3' src='https://i.ytimg.com/vi/1d2oe7W_22E/maxresdefault.jpg'>
+<img id='image4' src='https://i.scdn.co/image/ab67706c0000bebbda08815c139e8420005ba09b'>
+
+<ul id="playlist">
+	<li class="active">
+		<a href="https://music.youtube.com/watch?v=LjtvF_UuRIU&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Dancin (Krono Remix)(feat. Luvli)-Aaron Smith
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=sP7lp8UD1Xw&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Boss Bitch-Doja Cat
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=MBJFPq2Llps&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Rap God-Eminem
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=boZa3epPV9M&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Good On You-Alex Hobson feat. Talia Mar
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=HaEYUJ2aRHs&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Dynamite-BTS
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=zuaBRqUBhyw&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Locked Out of Heaven-Bruno Mars
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=lSLXS0bjSCs&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				The Night Begins To Shine-B.E.R
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=j1h0rPYKces&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Sugar (feat. Francesco Yates)-Robin Schulz
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=zI7-W58I-7E&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Diamonds (feat. Micah Martin)-RMCM & James Roche
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=jzXj2-KQ3MA&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Lighter-Nathan Dawe feat. KSI
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=RmYCOm4ehKs&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Save Your Tears-The Weeknd
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=M4T_k33CI1M&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Cake By The Ocean-DNCE
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=SQVkYgkMzhY&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				The Monster (feat. Rihanna)-Eminem
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=USqra5JF0cU&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				I Need Your Love (feat. Ellie Goulding)-Calvin Harris
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=TovGXLXHFk4&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				No Lie (feat. Dua Lipa)-Sean Paul
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=Kx7B-XvmFtE&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Believer-Imagine Dragons
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=pB-B6DUY0OY&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Venom (Music From The Motion Picture)-Eminem
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=t27SIIJ8CFo&list=RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Perfect 10 (Unknown Brain & Rudelies Vip)-Unknown Brain, Heather Sommer & RudeLies
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=z9VMaLxg9Ok&list=RDAMPLRDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Sunflower (From "Spider-Man: Into the Spider-Verse")-Post Malone
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=OBs1Fb8adGQ&list=RDAMPLRDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk">
+				Alone-Marshmello
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=VcNFJE6k2_Q&list=RDCLAK5uy_nJbR-8l4mhUUclTVrykXZdK1vqjU3caCg">
+				Take My Breath-The Weeknd
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=rkYlZnIbe2E&list=RDCLAK5uy_nJbR-8l4mhUUclTVrykXZdK1vqjU3caCg">
+				STAY-The Kid LAROI
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=GnmoJaTWiQE&list=RDCLAK5uy_kPqJ_FiGk-lbXtgM4IF42uokskSJZiVTI">
+				Woman-Doja Cat
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=xTvyyoF_LZY&list=RDCLAK5uy_lvhDOHjoj-PTrwErtypf8M1FMmSiVpjkI">
+				Shape of You-Ed Sheeran
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=6p3E7OMw52g&list=RDCLAK5uy_lvhDOHjoj-PTrwErtypf8M1FMmSiVpjkI">
+				CAN'T STOP THE FEELING! (Original Song from DreamWorks Animation's "TROLLS")
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=ZD6rXLXZOEI&list=RDCLAK5uy_lvhDOHjoj-PTrwErtypf8M1FMmSiVpjkI">
+				bad guy-Billie Eilish
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=r7-A9NqUjRI&list=RDCLAK5uy_lvhDOHjoj-PTrwErtypf8M1FMmSiVpjkI">
+				24K Magic-Bruno Mars
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=FFhGqNa-Waw&list=RDCLAK5uy_nKbdRGm-ovEaiFG7smcm4hgTi2_w01ZLc">
+				Congratulations (feat. Quavo)-Post Malone
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=k2pwvr8p4vM&list=RDCLAK5uy_nKbdRGm-ovEaiFG7smcm4hgTi2_w01ZLc">
+				BUTTERFLY EFFECT-Travis Scott
+		</a>
+	</li>
+	<li>
+		<a href="https://music.youtube.com/watch?v=cXFTrkNjbaI&list=RDCLAK5uy_nKbdRGm-ovEaiFG7smcm4hgTi2_w01ZLc">
+				Classic Man (Remix) (feat. Kendrick Lamar)-Jidenna
+		</a>
+	</li>
+</ul> 
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
+	
+	
+	
+	

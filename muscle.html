@@ -1,0 +1,156 @@
+<html>
+<head><title>Build Muscle</title></head>
+<body>
+<img src="images/logo.jpg" style="width:240px; float:right; margin-top:-40px;z-index">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="muscledesign.css" rel="stylesheet">
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="mainPage.html">Home</a>
+  <a href="emain.html">Exercises</a>
+  <a href="new.html">Diets</a>
+  <a href="Coaches2.html">Coaches</a>
+  <a href="http://localhost/BMI1.php">BMI</a>
+  <a href="http://localhost/calories%20tracking.php">Calorie Tracker</a>
+  <a href="playlist.html">Playlist</a>
+  <a href="https://www.myenso.de/">Shop Goods</a>
+  <a href="https://www.domaxsport.com/">Shop Clothes</a>
+  <a href="aboutus.html">About us</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  <h1>Build Muscle</h1>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/pushup.gif" style="width:350px">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/plankup.gif" style="width:350px">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/lunge.gif" style="width:350px">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<p>
+Muscle mass includes the weight of the muscles in your body in kilograms or pounds. While the body fat percentage measures the amount of
+fat your body holds. When your body builds muscles, it burns energy and fat all the time. As your muscle mass increases, the faster
+your body is able to burn calories. Muscle size increases when a person continually challenges the muscles to deal with higher levels
+of resistance or weight. This process is known as muscle hypertrophy. Muscle hypertrophy occurs when the fibers of the muscles sustain
+damage or injury. The body repairs damaged fibers by fusing them, which increases the mass and size of the muscles. Certain hormones,
+including testosterone, human growth hormone, and insulin growth factor, also play a role in muscle growth and repair.
+</p>
+<p>
+These hormones work by:
+</p>
+<ul>
+	<li>Improving how the body processes proteins</li>
+	<li>Inhibiting the breakdown of protein</li>
+	<li>Activating satellite cells, which are a type of stem cell that plays a role in muscle development</li>
+	<li>Stimulating anabolic hormones, which promote muscle growth and protein synthesis</li>
+	<li>Enhancing tissue growth</li>
+	<li>Strength and resistance training can help the body and so on</li>
+</ul>
+<p>
+You actually don’t have to pump iron to get stronger. All you need is yourself and some creativity to get those muscles moving.
+</p>
+<h2>1. Push-up: 3–6 sets of 6–12 reps</h2>
+<p>
+Lie face down and place hands on the floor, slightly wider than shoulders. Push up to lift shoulders, torso, and legs until
+arms are fully extended. Only your hands and toes should be touching the floor. Slowly lower your body until chest almost
+touches the floor, then repeat.
+</p>
+<img class="content" src="images/pushup.jpg">
+<h2>2. Plank-up: 3 sets of 5–10 reps</h2>
+<p>
+Start in plank position, with elbows and toes on the floor, core engaged, and torso elevated. Raise yourself into a
+push-up position by extending one arm at a time, keeping your body straight. Lower onto your elbows one arm at a time. Repeat.
+</p>
+<img class="content" src="images/plankup.jpg">
+<h2>3. Lunge: 3 sets of 15 reps (each side)</h2>
+<p>
+From a standing position, take a big step forward with one leg. Lower your body toward the floor until upper thigh of
+front leg is nearly parallel to the floor and back knee is just above the floor. Raise up by putting pressure on
+the heel of your front leg. Repeat by taking that big first step with the opposite leg.
+</p>
+<img class="content" src="images/lunge.jpg">
+<h2>Your 30-day muscle-building workout plan</h2>
+<p>
+Take these 18 exercises and work them into a weekly routine to kick off your monthlong plan. Here’s a schedule
+to help you build muscle while boosting your cardio and staying limber.
+</p>
+<table>
+  <tr> <td>Monday</td>		<td>upper body (arms, chest, and abs)</td> </tr>
+  <tr> <td>Tuesday</td>		<td>lower body (legs and butt)</td> </tr>
+  <tr> <td>Wednesday</td>	<td>rest or cardio</td> </tr>
+  <tr> <td>Thursday</td>	<td>upper body (shoulders, arms, back)</td> </tr>
+  <tr> <td>Friday</td>		<td>lower body (legs and butt)</td> </tr>
+  <tr> <td>Saturday</td>	<td>rest or cardio</td> </tr>
+  <tr> <td>Sunday</td>		<td>rest or cardio</td> </tr>  
+</table>
+  
+</div>
+
+<footer>@Shape Up 2022</footer>
+<div class="footerback"></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+</script>
+
+</body>
+</html>

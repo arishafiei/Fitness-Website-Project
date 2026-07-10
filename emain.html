@@ -1,0 +1,65 @@
+<html>
+<head><title>Exercises</title></head>
+<body>
+<img src="images/logo.jpg" style="width:240px; float:right; margin-top:-40px;z-index">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="emain.css" rel="stylesheet">
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="mainPage.html">Home</a>
+  <a href="emain.html">Exercises</a>
+  <a href="new.html">Diets</a>
+  <a href="Coaches2.html">Coaches</a>
+  <a href="http://localhost/BMI1.php">BMI</a>
+  <a href="http://localhost/calories%20tracking.php">Calorie Tracker</a>
+  <a href="playlist.html">Playlist</a>
+  <a href="https://www.myenso.de/">Shop Goods</a>
+  <a href="https://www.domaxsport.com/">Shop Clothes</a>
+  <a href="aboutus.html">About us</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  <h1>Exercises</h1>
+  
+<div class="box" style="margin-left:8%"></div>
+<h2>Stretch</h2>
+<img src="images/sm.gif" style="position:absolute;height:200px;margin-left:10.5%; margin-top:6%">
+<a class="text" href="stretch.html" style="margin-left:14%">Read more</a>
+
+<div class="box" style="margin-left:38%"></div>
+<h3>Build Muscle</h3>
+<img src="images/bmm.gif" style="position:absolute;height:200px;margin-left:40%; margin-top:6%">
+<a class="text" href="muscle.html" style="margin-left:45%">Read more</a>
+
+<div class="box" style="margin-left:68%"></div>
+ <h4>Lose Weight</h4>
+<img src="images/lwm.gif" style="position:absolute;height:200px;margin-left:69%; margin-top:6%">
+ <a class="text" href="loseweight.html"style="margin-left:75%">Read more</a>
+ 
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<footer>@Shape Up 2022</footer>
+<div class="footerback"></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}var slideIndex = 1;
+showSlides(slideIndex);
+</script>
+
+</body>
+</html>

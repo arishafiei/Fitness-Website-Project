@@ -1,0 +1,95 @@
+<html>
+<head><title>Lose Weight</title></head>
+<body>
+<img src="images/logo.jpg" style="width:240px; float:right; margin-top:-40px;z-index">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="loseweight.css" rel="stylesheet">
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="mainPage.html">Home</a>
+  <a href="emain.html">Exercises</a>
+  <a href="new.html">Diets</a>
+  <a href="Coaches2.html">Coaches</a>
+  <a href="http://localhost/BMI1.php">BMI</a>
+  <a href="http://localhost/calories%20tracking.php">Calorie Tracker</a>
+  <a href="playlist.html">Playlist</a>
+  <a href="https://www.myenso.de/">Shop Goods</a>
+  <a href="https://www.domaxsport.com/">Shop Clothes</a>
+  <a href="aboutus.html">About us</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  <h1>Lose Weight</h1>
+
+<img src="images/lw.gif" style="height:240px; margin-left:35%;">
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<h2>1. 10 min standing abs workout </h2>
+<p>
+You can do the entire core-energizing routine in under eight minutes, without getting on the ground. Not
+only is it convenient, but it's also a great way to shake up your usual abs’ workout.
+</p>
+<a href="https://www.youtube.com/watch?v=QKCkO9fy9O4"><img class="es" src="images/e1.jpg"></a>
+<h2>2. 15 min beginner workout for fat burning </h2>
+<p>
+Cardio-lovers, this 15-minute workout is for you! You'll not only get your heart rate up, but these 15 bodyweight
+moves will also strengthen your muscles. The best way to burn fat is by doing a combination of cardio and strength
+workouts, and you get them both in this one workout! There's no jumping so it's low-impact, and the moves are simple,
+so it's perfect for workout newbies.
+</p>
+<a href="https://www.youtube.com/watch?v=bleOTMDa3_4"><img class="es" src="images/e2.jpg"></a>
+<h2>3. 20 min slim inner & outer thigh </h2>
+<p>
+This 20 Minute Inner Thigh Slim Down Workout will help you burn fat and tone your thighs like crazy. Some of the exercises
+in this workout target the inner thighs exclusively. This helps boost calorie burn, which means tighter, toned thighs and better results for you!
+</p>
+<a href="https://www.youtube.com/watch?v=074eiXBWpm4"><img class="es" src="images/e3.jpg"></a>
+<h2>4. 30 min full body fat burn HIIT </h2>
+<p>
+HIIT is a workout technique that stands for High Intensity Interval Training, and it’s designed to maximize the amount of
+calories and fat you burn during a normal workout session. By doing this 30-min HIIT workout, you can have the same weight
+loss result as a 90-minute session in the gym. That’s because your body is brought to a peak state burning its fat deposits
+in order to sustain the physical effort you’re about to perform. The good news is that you can perform this HIIT training at
+home as well, no need for gym weights! So let’s start this fat burning HIIT exercise program at home, and let’s get in good shape!
+</p>
+<a href="https://www.youtube.com/watch?v=W4eKVKwf3rQ"><img class="es" src="images/e4.jpg"></a>
+<h2>5. 10 min full body HIIT workout program </h2>
+<p>
+If you are dedicated to losing fat, then we are ready with a challenge for you. Follow it without a cheat sheet and lose that fat!
+</p>
+<a href="https://www.youtube.com/watch?v=7X-oNNLozi4"><img class="es" src="images/e5.jpg"></a>
+</div>
+
+<footer>@Shape Up 2022</footer>
+<div class="footerback"></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head><title>About Us</title></head>
+<body>
+<img src="images/logo.jpg" style="width:240px; float:right; margin-top:-40px;z-index">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="aboutus.css" rel="stylesheet">
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="mainPage.html">Home</a>
+  <a href="emain.html">Exercises</a>
+  <a href="new.html">Diets</a>
+  <a href="Coaches2.html">Coaches</a>
+  <a href="http://localhost/BMI1.php">BMI</a>
+  <a href="http://localhost/calories%20tracking.php">Calorie Tracker</a>
+  <a href="playlist.html">Playlist</a>
+  <a href="https://www.myenso.de/">Shop Goods</a>
+  <a href="https://www.domaxsport.com/">Shop Clothes</a>
+  <a href="aboutus.html">About us</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  <h1>About Us</h1>
+<br>
+
+<h2>What do we do?</h2>
+<p>
+Shape Up is a website providing all the needs one would require to achieve hers/his body goals.
+We will help you through your fitness process and will be honoured to see you succeed in what you want to be.
+</p>
+<h2 style="color:#26408B">Our team</h2>
+<h2>Ariana</h2>
+<img src="images/placeholder-profile.jpg" style="height:25%" alt="Team member">
+<p>
+Greetings. I'm Ariana Shafiei and I moved from Iran to Germany on October 2021. I wish to study computer engineering next year and become a
+programmer after that. I'm looking forward to work for good companies and desing "Badass" websites.
+</p>
+<p class="mail">shafieiariana@gmail.com</p>
+<h2>Kusha</h2>
+<img src="images/kusha.jpg" style="height:25%">
+<p>
+Hi. My name is Kusha Sharma, I am form India and I am studying Computer Engineering in Germany. I want to become a Software Engineer and work in one of
+the renowned Companies all over world like Google, Accenture or Microsoft. This is kind of my first project and I am really ecstatic to complete it.
+</p>
+<p class="mail">kushasharma16@gmail.com</p>
+<h2>Minh Anh</h2>
+<img src="images/minhanh.jpg" style="height:25%">
+<p>
+My name is Minh Anh, and I'm from Vietnam. I will study Computer Engineering in Germany next year. I want to become a software developer
+and work for multinational technology corporations. This is my first project in programming, and I'm really excited to learn new things!
+</p>
+<p class="mail">minhanhjess@gmail.com</p>
+<h2>David</h2>
+<img src="images/david.jpg" style="height:25%">
+<p>
+The name's David. I am studying Computer Engineering in Germany. This course I chose because of my love for coding and programming,
+barring the fact that I had very little experience in this before now. I would like to work in high tech companies around the world
+such as Cisco and Square.Inc. This is my first actual hands-on project work on programming and I'm buzzing to complete it.
+Chill vibes all through. Peace ✌
+</p>
+<p class="mail">dgxavier100@gmail.com</p>
+<div class="container">
+  <form action="submit.html">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+	<label for="email">E-Mail</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+</div>
+<footer>@Shape Up 2022</footer>
+<div class="footerback"></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+</script>
+
+</body>
+</html>

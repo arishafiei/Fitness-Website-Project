@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>PT Finder</title>
+		<meta name="description" content="Wobbly slideshow effect using Snap.svg" />
+		<meta name="keywords" content="slideshow, wobbly, jelly, effect, svg, snap.svg, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<style>
+#more1 {display: none;}
+#more2 {display: none;}
+#more3 {display: none;}
+#more4 {display: none;}
+h1:hover{text-shadow:5px 5px 5px black; }
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0D0221;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #0D0221;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+		
+	</head>
+	<body>
+	<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="mainPage.html">Home</a>
+  <a href="emain.html">Exercises</a>
+  <a href="new.html">Diets</a>
+  <a href="Coaches2.html">Coaches</a>
+  <a href="http://localhost/BMI1.php">BMI</a>
+  <a href="http://localhost/calories%20tracking.php">Calorie Tracker</a>
+  <a href="playlist.html">Playlist</a>
+  <a href="https://www.myenso.de/">Shop Goods</a>
+  <a href="https://www.domaxsport.com/">Shop Clothes</a>
+  <a href="aboutus.html">About us</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  
+  <div class="container" >
+			<div id="slideshow" class="slideshow">
+				<ul>
+				<li>
+						<div class="slide">
+							<img width="300px" height="200px" class="icon" src="logo1.jpeg" >
+				
+								<h1 style="font-size: 60px;color:#26408B"><b>YOUR PT FINDER</b></h1>
+								<hr width="50%" align="center" >
+								<i><p style="color:#26408B; font-size: 48px">Don't be a brat, burn that fat</p></i>
+							
+							
+						</div>
+					</li>
+					<li>
+						<div class="slide">
+							<img class="icon" src="Picture1.jpg" width="250px" style="border-radius:50%" />
+							<h1 style="font-size:48px">Jay Oxley</h1>
+							<span align="center" style="font-size:48px">(Awaken Fitness)</span><br>
+							 
+							<br> West London Fitness, Blitz Crossfit, Gurnell Leisure Centre<br><br>
+							
+							
+				<span id="dots4">...</span><span id="more4"><p>I'm a West-London based Personal Trainer and Crossfit Trainer providing 1-to-1 coaching, group training sessions and nutrition guidance. My primary focus for clients is on functional movement as it is a necessity in life. By applying this concept you, ultimately can develop the ability to look good and move well. </p></span>
+ <br><br><button id="B4" type="button" onclick="myFunction4()" align="center" style="border:none;background-color:green; border-radius:8px; color:white"
+        >More</button>
+ <script>
+	function myFunction4() {
+  var dots4 = document.getElementById("dots4");
+  var moreText4 = document.getElementById("more4");
+  var btnText4 = document.getElementById("B4");
+
+  if (dots4.style.display === "none") {
+    dots4.style.display = "inline";
+    btnText4.innerHTML = "More";
+    moreText4.style.display = "none";
+  } else {
+    dots4.style.display = "none";
+    btnText4.innerHTML = "Less";
+    moreText4.style.display = "inline";
+  }
+}
+ </script>
+						</div>
+					</li>
+					
+					<li>
+						<div class="slide">
+							<img class="icon" src="pic4.jpg" width="250px" style="border-radius:50%" />
+							
+								<h1 style="font-size:48px">Pawel</h1>
+							<span align="center" style="font-size:48px">(Personal Trainer)</span><br>
+							 
+							<br> Sevenoaks Leisure Centre, Buckhurst Ln, Sevenoaks TN13 1LW<br><br>
+							
+							
+				<span id="dots3">...</span><span id="more3"><p>I've been able to make a difference for clients to reach their fitness objectives – weight loss, toning, strength, endurance, confidence. I have clients of all ages, male and female - I really enjoy talking to each one to understand what makes them tick and to figure out the best way to motivate them to train better.</p></span>
+				<br><br><button id="B3" type="button" onclick="myFunction3()" align="center" style="border:none;background-color:green; border-radius:8px; color:white"
+        >More</button>
+ <script>
+	function myFunction3() {
+  var dots3 = document.getElementById("dots3");
+  var moreText3 = document.getElementById("more3");
+  var btnText3 = document.getElementById("B3");
+
+  if (dots3.style.display === "none") {
+    dots3.style.display = "inline";
+    btnText3.innerHTML = "More";
+    moreText3.style.display = "none";
+  } else {
+    dots3.style.display = "none";
+    btnText3.innerHTML = "Less";
+    moreText3.style.display = "inline";
+  }
+}
+ </script>
+ </div>
+ </li>
+					<li>
+						<div class="slide">
+							<img class="icon" src="pic3.jpg" style="width:250px;border-radius:50%"/>
+							
+								<h1 style="font-size:48px">JESS MONAGHAN Jessfit</h1>
+								<span align="center" style="font-size:48px">(Personal Trainer)</span><br>
+								<br>Sandwell, Birmingham, Stourbidge, Dudley, Halesowen<br><br>	
+				<span id="dots2">...</span><span id="more2"><p> Are you looking for a trainer who will guide you and surround you with professional care? The only barrier between you and your goals is YOU, and together we can break down that barrier. I am a qualified personal trainer with a level 3 diploma and I am registered with REPS.</p></span>
+				<br><br><button onclick="myFunction2()" id="B2" type="button" align="center" style="border:none;background-color:green; border-radius:8px; color:white"
+        >More</button>
+ <script>
+	function myFunction2() {
+  var dots2 = document.getElementById("dots2");
+  var moreText2 = document.getElementById("more2");
+  var btnText2 = document.getElementById("B2");
+
+  if (dots2.style.display === "none") {
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "More";
+    moreText2.style.display = "none";
+  } else {
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Less";
+    moreText2.style.display = "inline";
+  }
+}
+ </script>
+
+						</div>
+					</li>
+					
+					<li>
+						<div class="slide" style="color:black">
+							<img class="icon" src="pic5.jpg" width="250px" style="border-radius:50%"/>
+							<h1 style="font-size:48px">Adrian </h1>
+							<span align="center" style="font-size:48px">(Personal Trainer)</span><br>
+								<br>Ironmonger Row Baths 1 Norman Street, London EC1V 3AA
+							<br><br>
+							
+				<span id="dots1">...</span><span id="more1"><p>Adrian Rozanski – Certified Personal Trainer and Nutritionist with years of experience in creating effective diets and training plans focused on achieving individual customers goals in a smooth way.</p> </span>
+				<br><br><button onclick="myFunction1()" id="B" type="button" align="center" style="border:none;background-color:green; border-radius:8px; color:white"
+        >More</button>
+ <script>
+	function myFunction1() {
+  var dots1 = document.getElementById("dots1");
+  var moreText1 = document.getElementById("more1");
+  var btnText1 = document.getElementById("B");
+
+  if (dots1.style.display === "none") {
+    dots1.style.display = "inline";
+    btnText1.innerHTML = "More";
+    moreText1.style.display = "none";
+  } else {
+    dots1.style.display = "none";
+    btnText1.innerHTML = "Less";
+    moreText1.style.display = "inline";
+  }
+}
+ </script>
+								
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/sliderFx.js"></script>
+		<script>
+			(function() {
+				new SliderFx( document.getElementById('slideshow'), {
+					easing : 'cubic-bezier(.8,0,.2,1)'
+				} );
+			})();
+		</script>
+  
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+		
+	</body>
+</html>
